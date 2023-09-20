@@ -28,7 +28,7 @@ namespace EmployeeOOP.Classes
 
         private int ValidateDay(int day, int month, int year)
         {
-            //Válido si el dia pertence a un día bisiesto
+            
             if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 return day;
@@ -58,7 +58,7 @@ namespace EmployeeOOP.Classes
         {
             if (!isLeapYear)
             {
-                //Exception creation
+                
                 throw new YearException(string.Format("El año {0} no es bisiesto.", year));
 
             }
@@ -77,7 +77,7 @@ namespace EmployeeOOP.Classes
             }
             else
             {
-                //Exception creation
+                
                 throw new YearException(string.Format("El año {0} no es válido.", year));
             }
         }
@@ -90,7 +90,7 @@ namespace EmployeeOOP.Classes
             }
             else
             {
-                //Exception creation
+                
                 throw new MonthException(string.Format("El mes {0} no es válido.", month));
             }
 
@@ -98,8 +98,7 @@ namespace EmployeeOOP.Classes
 
         public override string ToString()
         {
-            //dia/mes/año
-            // Maneras de concatenar Strings
+            
             var dateConcatenated1 = _day + "/" + _month + "/" + _year; //La más fea y vieja
             var dateConcatenated2 = $"{_day:00}/{_month:00}/{_year:0000}"; //Interpolación
             var dateConcatenated3 = string.Format("{0}/{1}/{2}", _day, _month, _year); //Class String.Format
